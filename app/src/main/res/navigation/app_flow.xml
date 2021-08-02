@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_flow"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.healthapp.ui.LoginFragment"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.healthapp.ui.RegisterFragment"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/hospitalListFragment"
+        android:name="com.example.healthapp.ui.HospitalListFragment"
+        tools:layout="@layout/fragment_hospital_list" />
+    <fragment
+        android:id="@+id/hospitalAddFragment"
+        android:name="com.example.healthapp.ui.HospitalAddFragment"
+        tools:layout="@layout/fragment_hospital_add" />
+    <fragment
+        android:id="@+id/hospitalDetailFragment"
+        android:name="com.example.healthapp.ui.HospitalDetailFragment"
+        tools:layout="@layout/fragment_hospital_detail" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.healthapp.ui.UserFragment"
+        tools:layout="@layout/fragment_user" />
+
+</navigation>
