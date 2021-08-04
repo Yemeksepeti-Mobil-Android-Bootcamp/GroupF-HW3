@@ -1,4 +1,4 @@
-package com.example.healthapp.ui
+package com.example.healthapp.ui.user
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,8 @@ import android.view.ViewGroup
 import com.example.healthapp.R
 
 
-class HospitalAddFragment : Fragment() {
+class RegisterFragment : Fragment() {
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +22,7 @@ class HospitalAddFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hospital_add, container, false)
+        return inflater.inflate(R.layout.fragment_register, container, false)
     }
-
 
 }
