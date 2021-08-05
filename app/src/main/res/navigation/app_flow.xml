@@ -72,8 +72,8 @@
         android:name="com.example.healthapp.ui.splash.SplashFragment"
         android:label="SplashFragment" >
         <action
-            android:id="@+id/action_splashFragment_to_hospitalListFragment"
-            app:destination="@id/hospitalListFragment" />
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 
 </navigation>

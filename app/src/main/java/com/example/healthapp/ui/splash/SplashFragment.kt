@@ -12,23 +12,15 @@ import com.example.healthapp.R
 
 
 class SplashFragment : Fragment() {
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         Handler(Looper.getMainLooper()).postDelayed({
-            val action = SplashFragmentDirections.actionSplashFragmentToHospitalListFragment()
+            val action = SplashFragmentDirections.actionSplashFragmentToLoginFragment()
             findNavController().navigate(action)
         }, 5000)
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }
-
 }
