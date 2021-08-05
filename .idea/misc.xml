@@ -18,8 +18,12 @@
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/layout/item_hospital.xml" value="0.23854166666666668" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/menu/top_app_bar.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/fragment_hospital_add.xml" value="0.1" />
         <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/fragment_hospital_detail.xml" value="0.1" />
-        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/fragment_hospital_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/fragment_hospital_list.xml" value="0.25" />
+        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/fragment_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/item_hospital.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/menu/top_app_bar.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

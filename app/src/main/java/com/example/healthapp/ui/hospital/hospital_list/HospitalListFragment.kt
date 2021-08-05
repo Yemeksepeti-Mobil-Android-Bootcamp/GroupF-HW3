@@ -1,4 +1,4 @@
-package com.example.healthapp.ui.hospital
+package com.example.healthapp.ui.hospital.hospital_list
 
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +11,6 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.healthapp.data.entity.Hospitals
 import com.example.healthapp.data.entity.HospitalsItem
 import com.example.healthapp.databinding.FragmentHospitalListBinding
 import com.example.healthapp.ui.adapter.HospitalListAdapter
@@ -20,7 +19,6 @@ import com.example.healthapp.utils.Resource
 import com.example.healthapp.utils.gone
 import com.example.healthapp.utils.show
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
 
 @AndroidEntryPoint
 class HospitalListFragment : Fragment() {
@@ -50,6 +48,13 @@ class HospitalListFragment : Fragment() {
 
         //val repository = ApiRepository()
         //val viewModelFactory = MainViewModelFactory(repository)
+
+        _binding.addHospitalButton.setOnClickListener {
+            val action =
+                HospitalListFragmentDirections.actionHospitalListFragmentToHospitalAddFragment()
+            findNavController().navigate(action)
+        }
+
 
         viewModel.fetchHospitalList().observe(viewLifecycleOwner, Observer {
             //it.status bizim için bir state

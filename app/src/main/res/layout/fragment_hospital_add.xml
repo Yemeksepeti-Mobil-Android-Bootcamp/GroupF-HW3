@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/edt_txt_hospital_name"
+        android:id="@+id/edtTxtHospitalName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textHospital" />
 
     <EditText
-        android:id="@+id/edt_txt_hospital_address"
+        android:id="@+id/edtTxtHospitalAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -60,7 +60,7 @@
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_txt_hospital_name" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtHospitalName" />
 
 
     <TextView
@@ -75,7 +75,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_txt_hospital_address" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtHospitalAddress" />
 
     <TextView
         android:id="@+id/btnAddHospital"
@@ -89,6 +89,18 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_txt_hospital_address" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtHospitalAddress" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

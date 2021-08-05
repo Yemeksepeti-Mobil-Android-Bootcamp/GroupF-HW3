@@ -15,19 +15,26 @@
         tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/hospitalListFragment"
-        android:name="com.example.healthapp.ui.hospital.HospitalListFragment"
+        android:name="com.example.healthapp.ui.hospital.hospital_list.HospitalListFragment"
         tools:layout="@layout/fragment_hospital_list" >
         <action
             android:id="@+id/action_hospitalListFragment_to_hospitalDetailFragment"
             app:destination="@id/hospitalDetailFragment" />
+        <action
+            android:id="@+id/action_hospitalListFragment_to_hospitalAddFragment"
+            app:destination="@id/hospitalAddFragment" />
     </fragment>
     <fragment
         android:id="@+id/hospitalAddFragment"
-        android:name="com.example.healthapp.ui.hospital.HospitalAddFragment"
-        tools:layout="@layout/fragment_hospital_add" />
+        android:name="com.example.healthapp.ui.hospital.hospital_add.HospitalAddFragment"
+        tools:layout="@layout/fragment_hospital_add" >
+        <action
+            android:id="@+id/action_hospitalAddFragment_to_hospitalListFragment"
+            app:destination="@id/hospitalListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/hospitalDetailFragment"
-        android:name="com.example.healthapp.ui.hospital.HospitalDetailFragment"
+        android:name="com.example.healthapp.ui.hospital.hospital_detail.HospitalDetailFragment"
         tools:layout="@layout/fragment_hospital_detail" >
         <argument
             android:name="name"
