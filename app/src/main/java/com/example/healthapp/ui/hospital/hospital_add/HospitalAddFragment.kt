@@ -67,6 +67,12 @@ class HospitalAddFragment : Fragment() {
                     }
             })
         }
+
+        _binding.textCancelHospital.setOnClickListener {
+            val action =
+                HospitalAddFragmentDirections.actionHospitalAddFragmentToHospitalListFragment()
+            findNavController().navigate(action)
+        }
     }
 
 }

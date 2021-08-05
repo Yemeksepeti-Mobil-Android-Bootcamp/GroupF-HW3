@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.healthapp.R
 import com.example.healthapp.data.entity.HospitalsItem
 import com.example.healthapp.databinding.FragmentHospitalListBinding
 import com.example.healthapp.ui.adapter.HospitalListAdapter
@@ -19,9 +20,10 @@ import com.example.healthapp.utils.Resource
 import com.example.healthapp.utils.gone
 import com.example.healthapp.utils.show
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.zip.ZipEntry
 
 @AndroidEntryPoint
-class HospitalListFragment : Fragment() {
+class HospitalListFragment : Fragment(R.layout.fragment_hospital_list) {
 
     private lateinit var _binding: FragmentHospitalListBinding
     private val viewModel: HospitalListViewModel by viewModels()
@@ -49,11 +51,24 @@ class HospitalListFragment : Fragment() {
         //val repository = ApiRepository()
         //val viewModelFactory = MainViewModelFactory(repository)
 
+        _binding.topAppBar.setOnMenuItemClickListener {
+            when (it.itemId){
+                R.id.userProfile->{
+                    val action =
+                        HospitalListFragmentDirections.actionHospitalListFragmentToUserFragment()
+                    findNavController().navigate(action)
+                    true
+                }
+                else->false
+            }
+
+        }
         _binding.addHospitalButton.setOnClickListener {
             val action =
                 HospitalListFragmentDirections.actionHospitalListFragmentToHospitalAddFragment()
             findNavController().navigate(action)
         }
+
 
 
         viewModel.fetchHospitalList().observe(viewLifecycleOwner, Observer {

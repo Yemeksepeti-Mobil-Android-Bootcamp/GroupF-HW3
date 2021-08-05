@@ -3,16 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_flow"
-    app:startDestination="@id/hospitalListFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.healthapp.ui.user.LoginFragment"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_hospitalListFragment"
+            app:destination="@id/hospitalListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.healthapp.ui.user.RegisterFragment"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/hospitalListFragment"
         android:name="com.example.healthapp.ui.hospital.hospital_list.HospitalListFragment"
@@ -23,6 +34,9 @@
         <action
             android:id="@+id/action_hospitalListFragment_to_hospitalAddFragment"
             app:destination="@id/hospitalAddFragment" />
+        <action
+            android:id="@+id/action_hospitalListFragment_to_userFragment"
+            app:destination="@id/userFragment" />
     </fragment>
     <fragment
         android:id="@+id/hospitalAddFragment"
@@ -30,6 +44,9 @@
         tools:layout="@layout/fragment_hospital_add" >
         <action
             android:id="@+id/action_hospitalAddFragment_to_hospitalListFragment"
+            app:destination="@id/hospitalListFragment" />
+        <action
+            android:id="@+id/action_hospitalAddFragment_to_hospitalListFragment2"
             app:destination="@id/hospitalListFragment" />
     </fragment>
     <fragment
@@ -49,5 +66,14 @@
         android:id="@+id/userFragment"
         android:name="com.example.healthapp.ui.user.UserFragment"
         tools:layout="@layout/fragment_user" />
+    <fragment
+        tools:layout="@layout/fragment_splash"
+        android:id="@+id/splashFragment"
+        android:name="com.example.healthapp.ui.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_hospitalListFragment"
+            app:destination="@id/hospitalListFragment" />
+    </fragment>
 
 </navigation>
