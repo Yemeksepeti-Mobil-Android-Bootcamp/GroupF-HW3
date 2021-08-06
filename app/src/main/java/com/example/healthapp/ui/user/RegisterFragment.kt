@@ -4,21 +4,34 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+<<<<<<< HEAD
 import com.example.healthapp.data.model.User
+=======
+import com.example.healthapp.R
+>>>>>>> 0c207b7f1d52897bd08f70ca8399267551e13b9e
 import com.example.healthapp.databinding.FragmentRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 
-class RegisterFragment : Fragment() {
+class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
 
     private val mFireStore=FirebaseFirestore.getInstance()
     private lateinit var auth: FirebaseAuth
+
+    var bloodGroups = arrayOf<String?>("A+", "A-", "B-", "B+", "AB-", "AB+" ,"0-", "0+")
+
+    lateinit var kanGrubu : String
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,8 +62,37 @@ class RegisterFragment : Fragment() {
                 }.addOnFailureListener {
                     println("not successful")
                 }
+
             }
         }
+        binding.spinner.onItemSelectedListener = this
+
+
+        val ad: ArrayAdapter<*> =
+            ArrayAdapter<Any?>(requireContext(), android.R.layout.simple_spinner_item, bloodGroups)
+
+        ad.setDropDownViewResource(
+            android.R.layout.simple_spinner_dropdown_item
+        )
+
+        // Set the ArrayAdapter (ad) data on the
+        // Spinner which binds data to spinner
+        binding.spinner.adapter = ad
+
+    }
+
+
+
+// Create an ArrayAdapter using the string array and a default spinner layout
+
+    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        Toast.makeText(requireContext(), bloodGroups[position], Toast.LENGTH_LONG).show()
+        kanGrubu = bloodGroups[position].toString()
+    }
+
+    override fun onNothingSelected(parent: AdapterView<*>?) {
+
+
     }
 
     override fun onDestroyView() {

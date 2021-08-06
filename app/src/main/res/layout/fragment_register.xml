@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.user.RegisterFragment">
 
+
+
+
     <TextView
         android:id="@+id/textWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/dm_serif_display_italic"
         android:text="Welcome!"
         android:textColor="@color/teal_700"
@@ -24,32 +28,32 @@
         android:id="@+id/textViewEnterAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/dm_serif_display_italic"
-        android:text="Please enter your account here"
+        android:text="Please enter your informations for register"
         android:textColor="@color/teal_700"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="32dp"
-        android:layout_weight="15"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="5"
         android:background="@drawable/et_border"
         android:drawableStart="@drawable/ic_message"
         android:drawablePadding="10dp"
         android:fontFamily="@font/dm_serif_display_italic"
-        android:hint="Email"
+        android:hint="Name"
         android:inputType="text"
         android:padding="15dp"
-        android:paddingStart="20dp"
+        android:paddingStart="10dp"
         android:paddingEnd="20dp"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -59,12 +63,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewEnterAccount" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
         android:layout_weight="5"
         android:background="@drawable/et_border"
         android:drawableStart="@drawable/ic_lock"
@@ -80,14 +84,97 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="15"
+        android:background="@drawable/et_border"
+        android:drawableStart="@drawable/ic_message"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/dm_serif_display_italic"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/et_border"
+            android:drawableStart="@drawable/body_scale"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/dm_serif_display_italic"
+            android:hint="Kilo"
+            android:inputType="number"
+            android:padding="15dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/et_border"
+            android:drawableStart="@drawable/height"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/dm_serif_display_italic"
+            android:hint="Boy"
+            android:inputType="number"
+            android:padding="15dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:spinnerMode="dialog"
+            android:prompt="@string/hint_resource"
+            android:layout_height="60dp" />
+
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/et_border"
         android:fontFamily="@font/dm_serif_display_italic"
@@ -98,10 +185,11 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:backgroundTint="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
