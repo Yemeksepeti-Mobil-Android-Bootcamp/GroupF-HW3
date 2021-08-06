@@ -7,6 +7,7 @@
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/drawable/ic_lock.xml" value="0.2546875" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/drawable/ic_message.xml" value="0.2546875" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/layout/activity_main.xml" value="0.23854166666666668" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/layout/dropdown_items.xml" value="0.2269021739130435" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/layout/fragment_hospital_add.xml" value="0.23854166666666668" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/layout/fragment_hospital_detail.xml" value="0.23854166666666668" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/layout/fragment_hospital_list.xml" value="0.23854166666666668" />
@@ -16,16 +17,8 @@
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/layout/fragment_splash.xml" value="0.23854166666666668" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/layout/fragment_user.xml" value="0.23854166666666668" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/layout/item_hospital.xml" value="0.23854166666666668" />
+        <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/layout/spinner_item.xml" value="0.25416666666666665" />
         <entry key="..\:/KODLUYORUZ_YEMEKSEPETI/HealthApp/app/src/main/res/menu/top_app_bar.xml" value="0.23854166666666668" />
-        <entry key="..\:/Users/Ugur/Desktop/HealthApp/app/src/main/res/layout/fragment_login.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Ugur/Desktop/HealthApp/app/src/main/res/layout/fragment_register.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/fragment_hospital_add.xml" value="0.1" />
-        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/fragment_hospital_detail.xml" value="0.1" />
-        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/fragment_hospital_list.xml" value="0.25" />
-        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/fragment_login.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/layout/item_hospital.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/nilay/AndroidStudioProjects/HealthApplication/app/src/main/res/menu/top_app_bar.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
