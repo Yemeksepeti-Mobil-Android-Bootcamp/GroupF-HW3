@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.user.UserFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -16,10 +17,10 @@
 
         <ImageView
             android:id="@+id/imageViewAvatar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="323dp"
+            android:layout_height="110dp"
             android:layout_marginTop="60dp"
-            android:src="@drawable/profile_user"
+            android:src="@drawable/user"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/dm_serif_display_italic"
-            android:text="name"
+            android:text="Name"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -43,7 +44,7 @@
         android:id="@+id/userInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,82 +52,85 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
+
         <LinearLayout
+            android:id="@+id/healthInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageViewUser"
+                android:id="@+id/imageViewInfo"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/user" />
+                android:src="@drawable/information" />
 
             <LinearLayout
+                android:id="@+id/healthInfo1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/usernameTitle"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/healthInfo2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="username"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/username"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/weightTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:text="Weight"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/heightTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:text="Height"
+                        android:textStyle="bold"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="user1"
-                    android:textSize="23sp" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/weightValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:text="Weight"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/heightValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:text="Height"
+                        android:textStyle="bold"
+                        android:textSize="25sp" />
+ />
+
+                </LinearLayout>
 
             </LinearLayout>
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imageViewPhone"
-                android:layout_width="55dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/telephone" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/phoneTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="phone"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/phone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="000111222333"
-                    android:textSize="23sp" />
-
-            </LinearLayout>
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -139,7 +143,7 @@
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/letter" />
+                android:src="@drawable/blood"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -147,22 +151,22 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/emailTitle"
+                    android:id="@+id/bloodGroupTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="email"
+                    android:text="Blood Group"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/email"
+                    android:id="@+id/bloodGroupValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="user_gmail_com"
+                    android:text="Blood Group"
                     android:textSize="23sp" />
 
             </LinearLayout>
@@ -178,7 +182,7 @@
                 android:id="@+id/imageViewAddress"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/pin" />
+                android:src="@drawable/email" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -186,26 +190,44 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/addressTitle"
+                    android:id="@+id/emailTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="address"
+                    android:text="Email"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/address"
+                    android:id="@+id/emailValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="antalya"
+                    android:text="Email"
                     android:textSize="23sp" />
 
             </LinearLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAppointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="end"
+            android:background="@drawable/et_border"
+            android:fontFamily="@font/dm_serif_display_italic"
+            android:padding="10dp"
+            android:text="Add an appointment"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/teal_200" />
 
     </LinearLayout>
 

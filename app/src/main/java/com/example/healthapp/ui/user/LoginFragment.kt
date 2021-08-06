@@ -29,19 +29,19 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
         binding.apply {
-            btnRegister.setOnClickListener {
+            btnLogin.setOnClickListener {
                 val action =
-                    LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
+                    LoginFragmentDirections.actionLoginFragmentToUserFragment()
                 findNavController().navigate(action)
             }
-            btnLogin.setOnClickListener {
+            btnRegister.setOnClickListener {
                 val email = editTextEmail.text.toString()
                 val password = editTextPassword.text.toString()
                 auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
                         println("successful")
                         val action =
-                            LoginFragmentDirections.actionLoginFragmentToHospitalListFragment()
+                            LoginFragmentDirections.actionLoginFragmentToUserFragment()
                         findNavController().navigate(action)
                     }
                 }.addOnFailureListener {
