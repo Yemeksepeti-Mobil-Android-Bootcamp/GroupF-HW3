@@ -16,10 +16,10 @@
 
         <ImageView
             android:id="@+id/imageViewAvatar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="323dp"
+            android:layout_height="110dp"
             android:layout_marginTop="60dp"
-            android:src="@drawable/profile_user"
+            android:src="@drawable/user"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/dm_serif_display_italic"
-            android:text="name"
+            android:text="Name - Age"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -43,13 +43,14 @@
         android:id="@+id/userInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,33 +61,84 @@
                 android:id="@+id/imageViewUser"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/user" />
+                android:src="@drawable/information" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/usernameTitle"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="username"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/username"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:text="Weight"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:text="Height"
+                        android:textStyle="bold"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:text="Blood Group"
+                        android:textStyle="bold"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="user1"
-                    android:textSize="23sp" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/usernameTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:text="Weight"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:text="Height"
+                        android:textStyle="bold"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:text="Blood Group"
+                        android:textStyle="bold"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -97,35 +149,10 @@
 
             <ImageView
                 android:id="@+id/imageViewPhone"
-                android:layout_width="55dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/telephone" />
+                android:layout_width="57dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/blood_sample" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/phoneTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="phone"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/phone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="000111222333"
-                    android:textSize="23sp" />
-
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -139,7 +166,7 @@
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/letter" />
+                android:src="@drawable/email" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,7 +179,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="email"
+                    android:text="Email"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
@@ -162,7 +189,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="user_gmail_com"
+                    android:text="example@gmail.com"
                     android:textSize="23sp" />
 
             </LinearLayout>
@@ -178,7 +205,7 @@
                 android:id="@+id/imageViewAddress"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/pin" />
+                android:src="@drawable/location" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -191,7 +218,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="address"
+                    android:text="Adress"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
@@ -201,7 +228,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:fontFamily="@font/dm_serif_display_italic"
-                    android:text="antalya"
+                    android:text="City"
                     android:textSize="23sp" />
 
             </LinearLayout>

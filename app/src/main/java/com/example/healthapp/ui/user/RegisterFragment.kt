@@ -9,11 +9,8 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-<<<<<<< HEAD
-import com.example.healthapp.data.model.User
-=======
 import com.example.healthapp.R
->>>>>>> 0c207b7f1d52897bd08f70ca8399267551e13b9e
+import com.example.healthapp.data.model.User
 import com.example.healthapp.databinding.FragmentRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -25,8 +22,9 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
 
-    private val mFireStore=FirebaseFirestore.getInstance()
     private lateinit var auth: FirebaseAuth
+
+    private val mFireStore = FirebaseFirestore.getInstance()
 
     var bloodGroups = arrayOf<String?>("A+", "A-", "B-", "B+", "AB-", "AB+" ,"0-", "0+")
 
@@ -48,13 +46,21 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
             btnRegister.setOnClickListener {
                 val email = editTextEmail.text.toString()
                 val password = editTextPassword.text.toString()
+                val name = editTextName.text.toString()
+                val weight = editTextWeight.text.toString()
+                val height = editTextHeight.text.toString()
+                val bloodGroup = kanGrubu
                 auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
                         println("successful")
-                        val firebaseUser:FirebaseUser=it.result!!.user!!
-                        val user= User(
+                        val firebaseUser: FirebaseUser = it.result!!.user!!
+                        val user = User(
                             firebaseUser.uid,
-                            email.trim()
+                            name,
+                            email,
+                            height,
+                            weight,
+                            bloodGroup
                         )
                         sendUserInformationToFirestore(user)
 
@@ -81,7 +87,17 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     }
 
+    fun sendUserInformationToFirestore(user: User) {
+        mFireStore.collection("Users")
+            .document(user.id)
+            .set(user, SetOptions.merge())
+            .addOnSuccessListener {
+                Toast.makeText(context, "BAŞARILI", Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener {
+                Toast.makeText(context, "Başarısız", Toast.LENGTH_SHORT).show()
+            }
 
+    }
 
 // Create an ArrayAdapter using the string array and a default spinner layout
 
@@ -99,17 +115,4 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
         super.onDestroyView()
         _binding = null
     }
-    fun sendUserInformationToFirestore(user: User){
-        mFireStore.collection("Users")
-            .document(user.id)
-            .set(user, SetOptions.merge())
-            .addOnSuccessListener {
-
-            }.addOnFailureListener {
-
-            }
-
-    }
-
-
 }

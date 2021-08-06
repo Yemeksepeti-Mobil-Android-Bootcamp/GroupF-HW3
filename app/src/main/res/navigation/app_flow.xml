@@ -65,7 +65,11 @@
     <fragment
         android:id="@+id/userFragment"
         android:name="com.example.healthapp.ui.user.UserFragment"
-        tools:layout="@layout/fragment_user" />
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFragment_to_loginFragment2"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         tools:layout="@layout/fragment_splash"
         android:id="@+id/splashFragment"
