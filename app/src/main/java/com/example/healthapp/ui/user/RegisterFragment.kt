@@ -8,6 +8,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.healthapp.data.entity.user.User
 import com.example.healthapp.databinding.FragmentRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -54,6 +55,8 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
                         val firebaseUser: FirebaseUser = it.result!!.user!!
                         val user = User(firebaseUser.uid, name, email, height, weight, bloodGroup)
                         sendUserInformationToFirestore(user)
+                        val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
+                        findNavController().navigate(action)
                     }
                 }.addOnFailureListener {
                     println("not successful")
