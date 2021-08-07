@@ -4,8 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.example.healthapp.data.ApiRepository
-import com.example.healthapp.data.entity.Hospitals
-import com.example.healthapp.data.entity.hospital.HospitalRequest
+import com.example.healthapp.data.entity.hospital.Hospitals
 import com.example.healthapp.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

@@ -1,6 +1,5 @@
 package com.example.healthapp.data
 
-import com.example.healthapp.data.entity.HospitalsItem
 import com.example.healthapp.data.entity.hospital.HospitalRequest
 import com.example.healthapp.data.remote.RemoteDataSource
 import com.example.healthapp.utils.performNetworkOperation

@@ -1,4 +1,4 @@
-package com.example.healthapp.ui.user
+package com.example.healthapp.ui.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.healthapp.R
 import com.example.healthapp.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 

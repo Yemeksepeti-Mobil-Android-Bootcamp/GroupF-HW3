@@ -1,13 +1,10 @@
 package com.example.healthapp.ui.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.healthapp.R
-import com.example.healthapp.data.entity.Hospitals
-import com.example.healthapp.data.entity.HospitalsItem
+import com.example.healthapp.data.entity.hospital.Hospitals
+import com.example.healthapp.data.entity.hospital.HospitalsItem
 import com.example.healthapp.databinding.ItemHospitalBinding
 import com.example.healthapp.ui.listeners.IHospitalClickListener
 
@@ -20,7 +17,7 @@ class HospitalListAdapter: RecyclerView.Adapter<HospitalListAdapter.HospitalView
     class HospitalViewHolder(val binding: ItemHospitalBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(HospitalsItem: HospitalsItem,  listener: IHospitalClickListener?) {
+        fun bind(HospitalsItem: HospitalsItem, listener: IHospitalClickListener?) {
             binding.hospitalName.text = HospitalsItem.name
             binding.hospitalAddress.text = HospitalsItem.address
             binding.itemFoodCardView.setOnClickListener {listener?.onClick(HospitalsItem)}

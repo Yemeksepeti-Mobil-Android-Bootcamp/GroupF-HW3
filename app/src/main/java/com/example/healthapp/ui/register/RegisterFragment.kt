@@ -1,4 +1,4 @@
-package com.example.healthapp.ui.user
+package com.example.healthapp.ui.register
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,15 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.healthapp.data.entity.user.User
 import com.example.healthapp.databinding.FragmentRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.SetOptions
+
 
 class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
@@ -28,6 +28,8 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private var bloodGroups = arrayOf<String?>("A+", "A-", "B-", "B+", "AB-", "AB+", "0-", "0+")
 
     private lateinit var bloodGroup: String
+
+    private val viewModel: RegisterViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,12 +51,19 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 val weight = editTextWeight.text.toString()
                 val height = editTextHeight.text.toString()
                 val bloodGroup = bloodGroup
+
+
                 auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
+
                         println("successful")
                         val firebaseUser: FirebaseUser = it.result!!.user!!
                         val user = User(firebaseUser.uid, name, email, height, weight, bloodGroup)
-                        sendUserInformationToFirestore(user)
+
+                     //   sendUserInformationToFirestore(user)
+
+                        viewModel.saveUserToFirebase(user)
+
                         val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
                         findNavController().navigate(action)
                     }
@@ -73,7 +82,8 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
         binding.spinner.adapter = ad
     }
 
-    private fun sendUserInformationToFirestore(user: User) {
+
+  /*  private fun sendUserInformationToFirestore(user: User) {
         mFireStore.collection("Users").document(user.id).set(user, SetOptions.merge())
             .addOnSuccessListener {
                 println("successful")
@@ -82,7 +92,7 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 println("not successful")
                 println(it)
             }
-    }
+    }*/
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         bloodGroup = bloodGroups[position].toString()

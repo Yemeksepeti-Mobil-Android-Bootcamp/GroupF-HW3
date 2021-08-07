@@ -1,4 +1,4 @@
-package com.example.healthapp.data.entity
+package com.example.healthapp.data.entity.hospital
 
 
 import com.google.gson.annotations.SerializedName
