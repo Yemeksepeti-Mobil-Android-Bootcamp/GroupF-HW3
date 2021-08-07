@@ -47,7 +47,7 @@
         android:drawablePadding="10dp"
         android:fontFamily="@font/dm_serif_display_italic"
         android:hint="Email"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         android:padding="15dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
@@ -122,6 +122,4 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

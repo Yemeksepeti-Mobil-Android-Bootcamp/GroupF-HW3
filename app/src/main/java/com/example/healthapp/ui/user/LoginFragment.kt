@@ -10,7 +10,7 @@ import com.example.healthapp.R
 import com.example.healthapp.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class LoginFragment : Fragment(R.layout.fragment_login) {
+class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!

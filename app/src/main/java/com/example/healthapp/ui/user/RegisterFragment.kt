@@ -82,7 +82,6 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        Toast.makeText(requireContext(), bloodGroups[position], Toast.LENGTH_LONG).show()
         bloodGroup = bloodGroups[position].toString()
     }
 
