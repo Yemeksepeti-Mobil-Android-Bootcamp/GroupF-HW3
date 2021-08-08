@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.healthapp.R
@@ -12,6 +13,7 @@ import com.example.healthapp.data.entity.user.User
 import com.example.healthapp.databinding.FragmentRegisterBinding
 import com.example.healthapp.databinding.FragmentUserBinding
 import com.example.healthapp.ui.hospital.hospital_detail.HospitalDetailFragmentArgs
+import com.example.healthapp.ui.register.RegisterViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -22,6 +24,7 @@ class UserFragment : Fragment(R.layout.fragment_user) {
     private val binding get() = _binding!!
 
     private val mFireStore= FirebaseFirestore.getInstance()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,4 +74,6 @@ class UserFragment : Fragment(R.layout.fragment_user) {
         }
         return currentUserID
     }
+
+
 }

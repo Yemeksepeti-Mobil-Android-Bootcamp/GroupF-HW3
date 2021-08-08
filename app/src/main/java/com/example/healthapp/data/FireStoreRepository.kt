@@ -1,6 +1,7 @@
 package com.example.healthapp.data
 
 import com.example.healthapp.data.entity.user.User
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 
@@ -20,4 +21,9 @@ class FireStoreRepository {
                 println(it)
             }
     }
+
+
+
+
+
 }

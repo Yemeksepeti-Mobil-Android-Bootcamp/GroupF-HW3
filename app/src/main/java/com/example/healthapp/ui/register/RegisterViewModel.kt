@@ -13,10 +13,10 @@ class RegisterViewModel  : ViewModel() {
 
     // save user to firebase
     fun saveUserToFirebase(user: User){
-
         firebaseRepository.sendUserInformationToFirestore(user)
-
     }
+
+
 }
 
 

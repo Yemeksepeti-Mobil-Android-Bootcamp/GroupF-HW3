@@ -61,6 +61,9 @@
             android:name="address"
             app:argType="string"
             app:nullable="true" />
+        <action
+            android:id="@+id/action_hospitalDetailFragment_to_userFragment"
+            app:destination="@id/userFragment" />
     </fragment>
     <fragment
         android:id="@+id/userFragment"

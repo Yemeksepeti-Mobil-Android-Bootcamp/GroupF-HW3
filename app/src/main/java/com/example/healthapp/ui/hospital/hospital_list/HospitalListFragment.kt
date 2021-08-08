@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -19,6 +21,7 @@ import com.example.healthapp.ui.listeners.IHospitalClickListener
 import com.example.healthapp.utils.Resource
 import com.example.healthapp.utils.gone
 import com.example.healthapp.utils.show
+import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -62,11 +65,18 @@ class HospitalListFragment : Fragment(R.layout.fragment_hospital_list) {
             }
 
         }
-        _binding.addHospitalButton.setOnClickListener {
-            val action =
-                HospitalListFragmentDirections.actionHospitalListFragmentToHospitalAddFragment()
-            findNavController().navigate(action)
+
+        if (getCurrentUserID()=="LhCisoNqOdVJxBwAwVLTYxhyKxp2"){
+            _binding.addHospitalButton.setOnClickListener {
+                val action =
+                    HospitalListFragmentDirections.actionHospitalListFragmentToHospitalAddFragment()
+                findNavController().navigate(action)
+            }
         }
+        else{
+            _binding.addHospitalButton.isVisible=false
+        }
+
 
 
 
@@ -106,5 +116,17 @@ class HospitalListFragment : Fragment(R.layout.fragment_hospital_list) {
               findNavController().navigate(action)
             }
         })
+    }
+
+    fun getCurrentUserID(): String {
+        // An Instance of currentUser using FirebaseAuth
+        val currentUser = FirebaseAuth.getInstance().currentUser
+
+        // A variable to assign the currentUserId if it is not null or else it will be blank.
+        var currentUserID = ""
+        if (currentUser != null) {
+            currentUserID = currentUser.uid
+        }
+        return currentUserID
     }
 }

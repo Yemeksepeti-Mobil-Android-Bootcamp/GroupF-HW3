@@ -55,8 +55,6 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
                 auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
-
-                        println("successful")
                         val firebaseUser: FirebaseUser = it.result!!.user!!
                         val user = User(firebaseUser.uid, name, email, height, weight, bloodGroup)
 
