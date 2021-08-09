@@ -1,6 +1,6 @@
-package com.example.healthapp.data.entity
+package com.example.healthapp.data.entity.appointment
 
-data class Appointment (
+data class AppointmentItem (
     val hospitalName:String="",
     val hospitalPlace:String="",
     val userId:String="",

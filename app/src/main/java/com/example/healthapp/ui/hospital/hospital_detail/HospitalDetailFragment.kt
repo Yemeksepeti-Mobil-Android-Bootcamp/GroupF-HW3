@@ -2,7 +2,6 @@ package com.example.healthapp.ui.hospital.hospital_detail
 
 import android.app.DatePickerDialog
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +11,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.healthapp.R
-import com.example.healthapp.data.entity.Appointment
+import com.example.healthapp.data.entity.appointment.AppointmentItem
 import com.example.healthapp.databinding.FragmentHospitalDetailBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -85,7 +84,7 @@ class HospitalDetailFragment : Fragment(R.layout.fragment_hospital_detail), Date
         sMonth = (month+1).toString()
         sYear = year.toString()
         sDate=sDay+"."+sMonth+"."+sYear
-      val appointment=Appointment(args.name!!, args.address!!,getCurrentUserID(),sDate,choice)
+      val appointment= AppointmentItem(args.name!!, args.address!!,getCurrentUserID(),sDate,choice)
 
         mFireStore.collection("Appointments")
             .document()

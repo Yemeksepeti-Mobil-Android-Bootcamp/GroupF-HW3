@@ -16,9 +16,9 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:src="@drawable/hospital_buildings" />
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/vaccine" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
             android:layout_gravity="center_vertical">
 
             <TextView
-                android:id="@+id/hospital_name"
+                android:id="@+id/hospitalName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -36,18 +36,33 @@
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="20sp"/>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
 
             <TextView
-                android:id="@+id/hospital_address"
+                android:id="@+id/choice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="10dp"
                 android:textSize="15sp"
                 android:fontFamily="@font/poppins_regular"
-                android:text="Hospital Address" />
+                android:text="Appointment Type" />
 
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Date" />
+            </LinearLayout>
 
-        </LinearLayout>
+            </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
