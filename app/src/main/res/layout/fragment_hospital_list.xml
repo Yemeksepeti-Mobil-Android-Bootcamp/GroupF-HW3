@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/teal_700"
+        android:background="@color/text2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,10 +22,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HOSPITALS"
-            android:textSize="30sp"
-            android:fontFamily="@font/dm_serif_display_italic"
-            android:textColor="@color/white"/>
+            android:layout_marginLeft="100dp"
+            android:text="Stay Healthy"
+            android:padding="5dp"
+            android:textSize="28sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/background"/>
 
 
     </com.google.android.material.appbar.MaterialToolbar>
@@ -39,20 +42,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topAppBar" />
 
-    <Button
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addHospitalButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/et_border"
-        android:backgroundTint="@color/teal_200"
-        android:fontFamily="@font/dm_serif_display_italic"
-        android:padding="10dp"
-        android:text="Add Hospital"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="@color/text2"
+        android:src="@drawable/ic_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

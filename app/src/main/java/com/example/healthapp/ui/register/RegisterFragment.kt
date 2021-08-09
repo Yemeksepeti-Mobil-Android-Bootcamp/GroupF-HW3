@@ -51,8 +51,7 @@ class RegisterFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 val weight = editTextWeight.text.toString()
                 val height = editTextHeight.text.toString()
                 val bloodGroup = bloodGroup
-
-
+                
                 auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
                         val firebaseUser: FirebaseUser = it.result!!.user!!
