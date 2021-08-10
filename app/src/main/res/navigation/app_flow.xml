@@ -8,18 +8,20 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.healthapp.ui.login.LoginFragment"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_userFragment"
-            app:destination="@id/userFragment" />
+            app:destination="@id/userFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.healthapp.ui.register.RegisterFragment"
-        tools:layout="@layout/fragment_register" >
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -27,7 +29,7 @@
     <fragment
         android:id="@+id/hospitalListFragment"
         android:name="com.example.healthapp.ui.hospital.hospital_list.HospitalListFragment"
-        tools:layout="@layout/fragment_hospital_list" >
+        tools:layout="@layout/fragment_hospital_list">
         <action
             android:id="@+id/action_hospitalListFragment_to_hospitalDetailFragment"
             app:destination="@id/hospitalDetailFragment" />
@@ -41,7 +43,7 @@
     <fragment
         android:id="@+id/hospitalAddFragment"
         android:name="com.example.healthapp.ui.hospital.hospital_add.HospitalAddFragment"
-        tools:layout="@layout/fragment_hospital_add" >
+        tools:layout="@layout/fragment_hospital_add">
         <action
             android:id="@+id/action_hospitalAddFragment_to_hospitalListFragment"
             app:destination="@id/hospitalListFragment" />
@@ -52,7 +54,7 @@
     <fragment
         android:id="@+id/hospitalDetailFragment"
         android:name="com.example.healthapp.ui.hospital.hospital_detail.HospitalDetailFragment"
-        tools:layout="@layout/fragment_hospital_detail" >
+        tools:layout="@layout/fragment_hospital_detail">
         <argument
             android:name="name"
             app:argType="string"
@@ -68,19 +70,26 @@
     <fragment
         android:id="@+id/userFragment"
         android:name="com.example.healthapp.ui.user.UserFragment"
-        tools:layout="@layout/fragment_user" >
+        tools:layout="@layout/fragment_user">
         <action
             android:id="@+id/action_userFragment_to_hospitalListFragment"
             app:destination="@id/hospitalListFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/userFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        tools:layout="@layout/fragment_splash"
         android:id="@+id/splashFragment"
         android:name="com.example.healthapp.ui.splash.SplashFragment"
-        android:label="SplashFragment" >
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>

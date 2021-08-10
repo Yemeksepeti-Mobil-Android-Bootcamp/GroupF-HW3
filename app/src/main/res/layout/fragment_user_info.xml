@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="200dp"
     android:background="@color/background"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view_pager.UserInfoFragment">
 
     <androidx.cardview.widget.CardView
@@ -32,11 +32,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Informations"
                 android:layout_gravity="center"
-                android:textSize="30sp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Informations"
                 android:textColor="@color/text"
-                android:fontFamily="@font/poppins_bold"/>
+                android:textSize="30sp" />
 
             <LinearLayout
                 android:id="@+id/healthInfo"
@@ -100,7 +100,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:fontFamily="@font/poppins_light"
-                            android:text="Weight"
+                            android:paddingStart="30dp"
+                            android:text="80"
                             android:textSize="22sp"
                             android:textStyle="bold" />
 
@@ -111,8 +112,8 @@
                             android:layout_marginStart="12dp"
                             android:fontFamily="@font/poppins_light"
                             android:gravity="end"
-                            android:paddingEnd="30dp"
-                            android:text="Height"
+                            android:paddingEnd="50dp"
+                            android:text="180"
                             android:textSize="22sp"
                             android:textStyle="bold" />
                         />

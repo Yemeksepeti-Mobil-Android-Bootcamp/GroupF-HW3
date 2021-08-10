@@ -3,10 +3,9 @@
 
     <item
         android:id="@+id/userProfile"
+        android:contentDescription="Profile"
         android:icon="@drawable/user_nav_bar"
         android:title="Profile"
-        android:contentDescription="Profile"
         app:showAsAction="ifRoom" />
-
 
 </menu>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background">
@@ -21,13 +20,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:text="Stay Healthy"
-            android:padding="5dp"
-            android:textSize="28sp"
+            android:layout_marginStart="100dp"
             android:fontFamily="@font/poppins_regular"
-            android:textColor="@color/background"/>
-
+            android:padding="5dp"
+            android:text="Stay Healthy"
+            android:textColor="@color/background"
+            android:textSize="28sp" />
 
     </com.google.android.material.appbar.MaterialToolbar>
 
@@ -54,7 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewHospital" />
-
 
     <TextView
         android:id="@+id/textViewHospitalAddress"
@@ -115,5 +112,4 @@
         app:iconPadding="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

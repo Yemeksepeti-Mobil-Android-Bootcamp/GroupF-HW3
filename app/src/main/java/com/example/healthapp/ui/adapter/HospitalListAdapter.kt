@@ -8,9 +8,9 @@ import com.example.healthapp.data.entity.hospital.HospitalsItem
 import com.example.healthapp.databinding.ItemHospitalBinding
 import com.example.healthapp.ui.listeners.IHospitalClickListener
 
-class HospitalListAdapter: RecyclerView.Adapter<HospitalListAdapter.HospitalViewHolder>()  {
+class HospitalListAdapter : RecyclerView.Adapter<HospitalListAdapter.HospitalViewHolder>() {
 
-    var hospitalList: Hospitals?= null
+    var hospitalList: Hospitals? = null
 
     private var listener: IHospitalClickListener? = null
 
@@ -20,28 +20,31 @@ class HospitalListAdapter: RecyclerView.Adapter<HospitalListAdapter.HospitalView
         fun bind(HospitalsItem: HospitalsItem, listener: IHospitalClickListener?) {
             binding.hospitalName.text = HospitalsItem.name
             binding.hospitalAddress.text = HospitalsItem.address
-            binding.itemFoodCardView.setOnClickListener {listener?.onClick(HospitalsItem)}
+            binding.itemFoodCardView.setOnClickListener { listener?.onClick(HospitalsItem) }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HospitalViewHolder {
-        return HospitalViewHolder( ItemHospitalBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false))
+        return HospitalViewHolder(
+            ItemHospitalBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: HospitalViewHolder, position: Int) {
-            hospitalList?.get(position)?.let {
-                holder.bind(it,listener)
-            }
+        hospitalList?.get(position)?.let {
+            holder.bind(it, listener)
+        }
     }
 
     override fun getItemCount(): Int {
         return hospitalList!!.size
     }
 
-    fun setData(newList: Hospitals?){
+    fun setData(newList: Hospitals?) {
         hospitalList = newList
         notifyDataSetChanged()
     }

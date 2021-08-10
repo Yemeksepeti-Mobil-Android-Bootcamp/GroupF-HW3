@@ -70,7 +70,7 @@
         android:backgroundTint="@color/white"
         android:drawablePadding="12dp"
         android:fontFamily="@font/poppins_regular"
-        android:hint="Hospital Name"
+        android:hint="Hospital Address"
         android:inputType="text"
         android:padding="15dp"
         android:paddingStart="20dp"

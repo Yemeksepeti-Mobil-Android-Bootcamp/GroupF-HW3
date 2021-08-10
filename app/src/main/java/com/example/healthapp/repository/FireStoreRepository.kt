@@ -1,15 +1,12 @@
-package com.example.healthapp.data
+package com.example.healthapp.repository
 
 import com.example.healthapp.data.entity.user.User
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 
 class FireStoreRepository {
 
-
     var firestoreDB = FirebaseFirestore.getInstance()
-
 
     fun sendUserInformationToFirestore(user: User) {
         firestoreDB.collection("Users").document(user.id).set(user, SetOptions.merge())
@@ -21,5 +18,4 @@ class FireStoreRepository {
                 println(it)
             }
     }
-
 }

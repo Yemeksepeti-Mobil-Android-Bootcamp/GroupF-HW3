@@ -1,4 +1,4 @@
-package com.example.healthapp.data
+package com.example.healthapp.repository
 
 import com.example.healthapp.data.entity.hospital.HospitalRequest
 import com.example.healthapp.data.remote.RemoteDataSource

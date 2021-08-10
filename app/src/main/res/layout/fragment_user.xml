@@ -13,7 +13,6 @@
         android:layout_height="400dp"
         app:layout_constraintBottom_toTopOf="@+id/btnAppointment"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
@@ -58,5 +57,16 @@
         app:backgroundTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_exit_to_app_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

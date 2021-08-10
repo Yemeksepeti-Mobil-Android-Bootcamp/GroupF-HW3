@@ -3,7 +3,7 @@ package com.example.healthapp.ui.hospital.hospital_add
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import com.example.healthapp.data.ApiRepository
+import com.example.healthapp.repository.ApiRepository
 import com.example.healthapp.data.entity.hospital.HospitalRequest
 import com.example.healthapp.data.entity.hospital.HospitalResponse
 import com.example.healthapp.utils.Resource
