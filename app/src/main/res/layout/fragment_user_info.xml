@@ -100,7 +100,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:fontFamily="@font/poppins_light"
-                            android:paddingStart="30dp"
+                            android:paddingStart="25dp"
                             android:text="80"
                             android:textSize="22sp"
                             android:textStyle="bold" />

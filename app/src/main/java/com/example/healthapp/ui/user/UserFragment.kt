@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class UserFragment : Fragment() {
 
@@ -24,6 +25,8 @@ class UserFragment : Fragment() {
     private val mFireStore = FirebaseFirestore.getInstance()
 
     private lateinit var auth: FirebaseAuth
+
+    private lateinit var dotsIndicator: DotsIndicator
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,7 +39,6 @@ class UserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
-        initViewPager()
         auth = Firebase.auth
         binding.apply {
             btnAppointment.setOnClickListener {
@@ -48,7 +50,9 @@ class UserFragment : Fragment() {
                 val action = UserFragmentDirections.actionUserFragmentToLoginFragment()
                 findNavController().navigate(action)
             }
+            dotsIndicator = springDotsIndicator
         }
+        initViewPager()
     }
 
     private fun initViewPager() {
@@ -59,7 +63,10 @@ class UserFragment : Fragment() {
         )
         val adapter =
             ViewPagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
-        binding.viewPager.adapter = adapter
+        binding.apply {
+            viewPager.adapter = adapter
+            dotsIndicator.setViewPager2(viewPager)
+        }
     }
 
     private fun initViews() {

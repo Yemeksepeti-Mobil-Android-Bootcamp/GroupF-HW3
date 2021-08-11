@@ -48,7 +48,7 @@
         <entry key="app/src/main/res/layout/fragment_hospital_detail.xml" value="0.2421875" />
         <entry key="app/src/main/res/layout/fragment_hospital_list.xml" value="0.2421875" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.2421875" />
-        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.2421875" />
+        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.20394736842105263" />
         <entry key="app/src/main/res/layout/fragment_user_appointment.xml" value="0.2421875" />
         <entry key="app/src/main/res/layout/fragment_user_info.xml" value="0.2421875" />
         <entry key="app/src/main/res/layout/item_hospital.xml" value="0.2421875" />
